@@ -21,3 +21,18 @@
 	
 	;
 	
+	// Loads dropdown list of weapon options
+	function loadWeapon(form) {
+		det.idx = form.selector.value;
+		var wd = det.w[det.idx].split(",");
+		det.y = parseInt(wd[0]);
+		det.mapzoom = parseInt(wd[4]);
+		if (det.idx > 0)	{
+			document.getElementById('t_1').innerHTML = wd[1] + ", " + wd[2] + ", " + wd[3];
+		}
+		else	{
+			document.getElementById('t_1').innerHTML = "&nbsp;";
+		}
+		return 1;
+	}	
+	
