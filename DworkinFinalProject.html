@@ -1,1 +1,96 @@
+<html>
+  <head>
+    
+    <title>Nuclear Terrorism - Blast Maps</title>       
+	<script src="DworkinFinalProject.js" type="text/javascript"></script>
+</head>
 <link href='http://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+<style>
+.gz_text
+{
+	font-size: 14px;
+	margin: 2px;
+
+}
+
+p{
+	font-family: 'Syncopate', sans-serif;
+	font-size:14px}
+	
+	h2{
+		font-family: 'Syncopate', bold;
+		color: #a94732;
+		font-size:28px;}
+
+</style>
+<body><div align="center">
+<h2>NUCLEAR TERRORISM<br>BLAST MAPS </h2></div>
+<table width="95%" border="0" cellspacing=2 cellpadding=1>
+  <tr>
+    <td><div id="map" style="width: 600px; height:400px;"></div>
+    </td>
+    <td>&nbsp;</td>
+    <td>
+    
+    
+    
+    <p><strong>Step 1</strong>: Enter City or Address in search bar:</p>
+		    <input id="address" type="textbox" size="35" onClick="javascript:document.getElementById('address').value=''" onChange="codeAddress()">
+		    
+	<hr>
+	<form name="yields">
+	
+    <p><strong>Step 2</strong>: Select nuclear weapon of choice from dropdown list:</p>	
+		<select class="gz_text" margin: 2px" name="selector" onChange="loadWeapon(this.form)">
+			<option value=0> Select a Weapon </option>
+			<option value=1>"February 2013 Test", 2013, North Korea - 7kt</option>
+			<option value=2>"Little Boy", 1945, USA - 15kt</option>
+			<option value=3>"Fat Man", 1945, USA - 21kt</option>
+            <option value=4>"DF-31", 2001, China - 140kt</option>
+              <option value=5>"B61", 1991, USA - 340kt</option>
+			<option value=6>"Joe-4", 1953, USSR - 400kt</option>
+			<option value=7>"MK28", 1958, USA - 1.4mt</option>
+          <option value=8>"Ivy Mike", 1952, USA - 12mt</option>
+          <option value=9>"Tsar Bomba", 1961, USSR - 50mt</option>
+	
+		
+					
+		</select>	 					
+	
+	</form>
+	
+<hr>
+<p><strong>Step 3</strong>: Detonate weapon to visualize the areas effected</p>
+		
+		<input id="btn1"  margin: 2px;" type="button" value="Detonate" name="btnRun" onClick="javascript:drop=dropBomb();"/> 
+<hr>
+<p><strong>Step 4</strong>: Clear map and start over</p>
+		<input id="btn2"   margin: 2px;" type="button" value="Reset" name="btnClear" onClick="javascript:clearAll();"/>
+</td>
+</tr>
+</table><hr>
+<table width="95%" border="0" cellspacing=2 cellpadding=1>
+  <tr>
+    <td width="70"  height="50" bgcolor="#a94732">&nbsp;</td>
+    <td width="5">&nbsp;</td>
+    <td ><p>Most structures destroyed, and those left standing reduced to empty shells. 100% fatality rate in this area.</p></td>
+  </tr>
+  <tr>
+    <td height="50" bgcolor="#00cf68">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><p>Fatal radiation  doses to anyone directly exposed to the blast. Serious damage to buildings, with significant risks of firestorm. Most people in ring left dead or severly injured.</p></td>
+  </tr>
+  <tr>
+    <td height="50" bgcolor="#5b4efa">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><p>Area would be ravaged by radiation and fires. Skin blisters and pain.</p></td>
+  </tr>
+  <tr>
+    <td height="50" bgcolor="#ff9933">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><P>Sunburn-like discomfort, skin redness</P></td>
+  </tr>
+</table>
+
+</body>
+</html>
