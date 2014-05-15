@@ -295,3 +295,25 @@ function codeAddress() {
 	
 	window.onload = loadScript;
 	
+	//Clears blast area rings on map
+	function closeInfoWindow()	{
+		if (det.infowindow)
+			det.infowindow.close();	
+	}	
+
+		
+	function clearAll(){	
+		closeInfoWindow();		
+		deleteCircles();
+		document.forms.yields.selector.value = 0;
+		document.getElementById('t_1').innerHTML = " ";
+		document.getElementById('t_3').innerHTML = " ";		
+	
+		det.idx=0;
+		det.mapzoom=13;
+		det.map.setCenter(det.location, det.mapzoom);
+		det.tg[0] = parseFloat(det.location.lat());
+		det.tg[1] = parseFloat(det.location.lng());	
+		det.drop=0;
+		return 1;
+	}
