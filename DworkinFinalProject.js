@@ -36,3 +36,11 @@
 		return 1;
 	}	
 	
+	//Calls the Google Map libraries 
+	function loadScript() {
+	  var script = document.createElement("script");
+	  script.type = "text/javascript";
+	  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAF0_yYi3uRm-N2V1FbtR9pHK6jtgMCJHs&sensor=false&callback=initialize";
+	  document.body.appendChild(script);
+	}
+	
